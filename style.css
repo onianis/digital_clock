@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'Satoshi-LightItalic';
+    src: url('assets/fonts/Satoshi-LightItalic.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-LightItalic.woff') format('woff'),
+        url('assets/fonts/Satoshi-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('assets/fonts/Satoshi-Regular.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-Regular.woff') format('woff'),
+        url('assets/fonts/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Italic';
+    src: url('assets/fonts/Satoshi-Italic.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-Italic.woff') format('woff'),
+        url('assets/fonts/Satoshi-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Satoshi-Medium';
+    src: url('assets/fonts/Satoshi-Medium.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-Medium.woff') format('woff'),
+        url('assets/fonts/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-MediumItalic';
+    src: url('assets/fonts/Satoshi-MediumItalic.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-MediumItalic.woff') format('woff'),
+        url('assets/fonts/Satoshi-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-Bold.woff') format('woff'),
+        url('assets/fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-BoldItalic';
+    src: url('assets/fonts/Satoshi-BoldItalic.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-BoldItalic.woff') format('woff'),
+        url('assets/fonts/Satoshi-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Satoshi-Black';
+    src: url('assets/fonts/Satoshi-Black.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-Black.woff') format('woff'),
+        url('assets/fonts/Satoshi-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-BlackItalic';
+    src: url('assets/fonts/Satoshi-BlackItalic.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-BlackItalic.woff') format('woff'),
+        url('assets/fonts/Satoshi-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: italic;
+}
+
+
+
+body {
+    background-image: url("assets/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+    height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+#TimezoneDisplay {
+    font-family: 'Satoshi-Regular';
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#mainTimeDisplay {
+    font-family: 'Satoshi-Black';
+    font-size: 5em;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-top: 0px;
+
+}
+
+.AmPmDisplay {
+    font-family: 'Satoshi-Medium';
+    font-size: 1.5em;
+    text-align: center;
+    width: 3%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    margin: 0;
+}
+
+#AmPmContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 47%;
+    margin-bottom: 15px;
+}
+
+#timeInfoContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#TextContainer {
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+#optionsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    width: 96%;
+}
+
+#optionLabelsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    min-width: 120px;
+}
+
+#optionSelectorsContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 9%;
+}
+
+#Hr24TimeSwitchLabel {
+    font-family: 'Satoshi-Bold';
+    font-size: 1.3em;
+    margin-top: 3px;
+}
+
+#Hr24Slider {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+/* SLIDER */
+.slider {
+    background-color: #ffffff2b;
+    border-radius: 100px;
+    padding: 1px;
+    margin: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    align-items: center;
+    position: relative;
+    display: block;
+    width: 51px;
+    height: 29px;
+    box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset,
+        #22cc3f 0px 0px 0px 0px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+}
+
+.slider::after {
+    content: "";
+    display: flex;
+    top: 2.3px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: #e3e3e3;
+    border-radius: 200px;
+    position: absolute;
+    box-shadow: transparent 0px 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+    transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    will-change: left, background-color;
+}
+
+.switch input[type="checkbox"]:checked + .slider {
+    box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, #22cc3f 0px 0px 0px 2px inset, #22cc3f 0px 0px 0px 24px inset,
+        rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+}
+
+.switch input[type="checkbox"]:checked + .slider::after {
+    left: 24px;
+}
+
+.switch input[type="checkbox"] {
+    display: none;
+}

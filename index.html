@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>53 - Digital Clock Program</title>
+    </head>
+
+    <body>
+        <div id="mainContainer">
+            <div id="TextContainer">
+                <h2 id="TimezoneDisplay">TIMEZONE_TEST_LABEL</h2>
+                <div id="timeInfoContainer">
+                    <h3 id="mainTimeDisplay">00:00:00</h3>
+                    <div id="AmPmContainer">
+                        <h3 id="AmDisplay" class="AmPmDisplay">AM</h3>
+                        <h3 id="PmDisplay" class="AmPmDisplay">PM</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="optionsContainer">
+            <div id="optionLabelsContainer">
+                <label for="Hr24TimeSwitch" id="Hr24TimeSwitchLabel">24hr Time:</label>
+            </div>
+
+            <div id="optionSelectorsContainer">
+                <label class="switch" id="Hr24TimeSwitchContainer">
+                    <input type="checkbox" id="Hr24TimeSwitch">
+                    <span class="slider" id="Hr24Slider"></span>
+                </label>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+
+</html>
