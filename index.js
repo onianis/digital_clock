@@ -3,37 +3,9 @@ mainTimeDisplay = document.getElementById("mainTimeDisplay");
 hr24Switch = document.getElementById("Hr24TimeSwitch");
 amDisplay = document.getElementById("AmDisplay");
 pmDisplay = document.getElementById("PmDisplay");
-timezoneSelector = document.getElementById("timezoneSelector");
-chooser_utcM11 = document.getElementById("utc-11");
-chooser_utcM10 = document.getElementById("utc-10");
-chooser_utcM9 = document.getElementById("utc-9");
-chooser_utcM8 = document.getElementById("utc-8");
-chooser_utcM7 = document.getElementById("utc-7");
-chooser_utcM6 = document.getElementById("utc-6");
-chooser_utcM5 = document.getElementById("utc-5");
-chooser_utcM4 = document.getElementById("utc-4");
-chooser_utcM3 = document.getElementById("utc-3");
-chooser_utcM2 = document.getElementById("utc-2");
-chooser_utcM1 = document.getElementById("utc-1");
-chooser_utc = document.getElementById("utc");
-chooser_utcP1 = document.getElementById("utc+1");
-chooser_utcP2 = document.getElementById("utc+2");
-chooser_utcP3 = document.getElementById("utc+3");
-chooser_utcP4 = document.getElementById("utc+4");
-chooser_utcP5 = document.getElementById("utc+5");
-chooser_utcP6 = document.getElementById("utc+6");
-chooser_utcP7 = document.getElementById("utc+7");
-chooser_utcP8 = document.getElementById("utc+8");
-chooser_utcP9 = document.getElementById("utc+9");
-chooser_utcP10 = document.getElementById("utc+10");
-chooser_utcP11 = document.getElementById("utc+11");
-chooser_utcP12 = document.getElementById("utc+12");
-chooser_utcP13 = document.getElementById("utc+13");
-chooser_utcP14 = document.getElementById("utc+14");
 
 let strCurrentHour, strCurrentMinute, strCurrentSecond;
 let hr24IsEnabled = true;
-let currentTimeOffsetMin = 0, relativeDifferenceMin = 0;
 hr24Switch.checked = true;
 
 currentTime = new Date();
@@ -123,7 +95,6 @@ function getTimeOffset() {
     timezoneOffsetHr = timezoneOffsetMin / 60;
 }
 
-currentTimeOffsetMin = timezoneOffsetMin;
 getTimeOffset();
 deriveTimezoneSwitch();
 
@@ -208,29 +179,9 @@ function deriveTimezoneSwitch() {
             timezoneDisplay.textContent = "UTC+14 // Kiribati";
             break;
     }
-    currentTimeOffsetMin = timezoneOffsetMin;
 }
 
 hr24Switch.onclick = function () {
     if (hr24Switch.checked) hr24IsEnabled = true; else hr24IsEnabled = false;
     mainTicker();
-}
-
-console.log(currentTimeOffsetMin);
-
-function timezoneChange() {
-    console.log("change detected");
-    var selection = timezoneSelector.options[timezoneSelector.selectedIndex].id;
-
-    switch (true) {
-        case selection === "utc-11":
-            console.log("utc-11 selected");
-            relativeDifferenceMin = timezoneOffsetMin - 660;
-            console.log(relativeDifferenceMin);
-
-
-
-    }
-
-
 }
